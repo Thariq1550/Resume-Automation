@@ -6,6 +6,10 @@ from resume_optimizer import optimize_resume
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Welcome to the AI Job Application Tool! 🚀"
+
 @app.route("/upload_resume", methods=["POST"])
 def upload_resume():
     if "file" not in request.files:
